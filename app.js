@@ -5,7 +5,7 @@ function agregarAmigo() {
     const nombre = input.value.trim();
     
     if (nombre === "") {
-        alert("Por favor, ingresa un nombre válido.");
+        alert("Por favor, inserte un nombre.");
         return;
     }
     
@@ -18,11 +18,11 @@ function actualizarLista() {
     const listaAmigos = document.getElementById("listaAmigos");
     listaAmigos.innerHTML = "";
     
-    amigos.forEach((amigo, index) => {
+    for (let i = 0; i < amigos.length; i++) {
         const li = document.createElement("li");
-        li.textContent = amigo;
+        li.textContent = amigos[i];
         listaAmigos.appendChild(li);
-    });
+    }
 }
 
 function sortearAmigo() {
